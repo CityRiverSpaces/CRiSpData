@@ -1,8 +1,8 @@
-library(osmdata)
-library(sf)
-library(dplyr)
-
-sf::sf_use_s2(FALSE)
+# library(osmdata)
+# library(sf)
+# library(dplyr)
+#
+# sf::sf_use_s2(FALSE)
 
 # Set the parameters
 city_name <- "Bucharest"
@@ -78,10 +78,18 @@ link_values <- vapply(X = highway_values,
                       FUN.VALUE = character(1),
                       USE.NAMES = FALSE)
 
+bb_buffer <- 2000
+bb_exp <- bb |>
+  sf::st_as_sfc() |>
+  sf::st_transform(crs) |>
+  sf::st_buffer(bb_buffer) |>
+  sf::st_bbox() |>
+  sf::st_transform(sf::st_crs("EPSG:4326"))
+
 # Get streets
-aoi <- sf::st_bbox(aoi_network) |> sf::st_transform(sf::st_crs("EPSG:4326"))
-aoi_network_streets <- aoi_network |> sf::st_transform(sf::st_crs("EPSG:4326"))
-streets <- aoi |>
+# aoi <- sf::st_bbox(aoi_network) |> sf::st_transform(sf::st_crs("EPSG:4326"))
+# aoi_network_streets <- aoi_network |> sf::st_transform(sf::st_crs("EPSG:4326"))
+streets <- bb_exp |>
   osmdata::opq() |>
   osmdata::add_osm_feature("highway", c(highway_values, link_values)) |>
   osmdata::osmdata_sf()
@@ -94,16 +102,16 @@ streets_lines <- streets$osm_lines |>
   dplyr::select("highway") |>
   dplyr::rename("type" = "highway")
 
-aoi <- sf::st_as_sfc(aoi)
-mask <- sf::st_intersects(streets_lines, aoi_network_streets, sparse = FALSE)
-streets_lines <- streets_lines[mask, ]
+# aoi <- sf::st_as_sfc(aoi)
+# mask <- sf::st_intersects(streets_lines, aoi_network_streets, sparse = FALSE)
+# streets_lines <- streets_lines[mask, ]
 streets <- sf::st_transform(streets_lines, crs)
 bucharest_osm <- append(bucharest_osm, list(streets = streets))
 
 # Get railways
-aoi <- sf::st_bbox(aoi_network) |> sf::st_transform(sf::st_crs("EPSG:4326"))
-aoi_network_railways <- aoi_network |> sf::st_transform(sf::st_crs("EPSG:4326"))
-railways <- aoi |>
+# aoi <- sf::st_bbox(aoi_network) |> sf::st_transform(sf::st_crs("EPSG:4326"))
+# aoi_network_railways <- aoi_network |> sf::st_transform(sf::st_crs("EPSG:4326"))
+railways <- bb_exp |>
   osmdata::opq() |>
   osmdata::add_osm_feature("railway", "rail") |>
   osmdata::osmdata_sf()
@@ -111,10 +119,10 @@ railways_lines <- railways$osm_lines |>
   dplyr::select("railway") |>
   dplyr::rename("type" = "railway")
 
-aoi <- sf::st_as_sfc(aoi)
-mask <- sf::st_intersects(railways_lines, aoi_network_railways, sparse = FALSE)
-railways_lines <- railways_lines[mask, ]
-railways_lines <- sf::st_transform(railways_lines, crs)
+# aoi <- sf::st_as_sfc(aoi)
+# mask <- sf::st_intersects(railways_lines, aoi_network_railways, sparse = FALSE)
+# railways_lines <- railways_lines[mask, ]
+# railways_lines <- sf::st_transform(railways_lines, crs)
 railways <- sf::st_transform(railways_lines, crs)
 bucharest_osm <- append(bucharest_osm, list(railways = railways))
 
