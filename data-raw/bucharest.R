@@ -70,7 +70,9 @@ bucharest_osm <- list(
 # Get streets and railways ----
 aoi_network <- sf::st_buffer(river_centerline, network_buffer) |>
   sf::st_union(sf::st_buffer(river_surface, network_buffer))
-bucharest_osm <- append(bucharest_osm, list(aoi_network = aoi_network))
+bucharest_osm <-
+  append(bucharest_osm, list(aoi_network = aoi_network |>
+                               sf::st_transform(sf::st_crs("EPSG:4326"))))
 
 highway_values <- c("motorway", "trunk", "primary", "secondary", "tertiary")
 link_values <- vapply(X = highway_values,
@@ -129,7 +131,10 @@ bucharest_osm <- append(bucharest_osm, list(railways = railways))
 # Get buildings ----
 aoi_buildings <- sf::st_buffer(river_centerline, buildings_buffer) |>
   sf::st_union(sf::st_buffer(river_surface, buildings_buffer))
-bucharest_osm <- append(bucharest_osm, list(aoi_buildings = aoi_buildings))
+
+bucharest_osm <-
+  append(bucharest_osm, list(aoi_buildings = aoi_buildings |>
+                               sf::st_transform(sf::st_crs("EPSG:4326"))))
 
 aoi <- sf::st_bbox(aoi_buildings) |> sf::st_transform(sf::st_crs("EPSG:4326"))
 aoi_buildings <- sf::st_transform(aoi_buildings, sf::st_crs("EPSG:4326"))
