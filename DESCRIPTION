@@ -1,0 +1,18 @@
+Package: CRiSpData
+Title: Data for the City River Spaces packages
+Version: 0.0.0.9000
+Authors@R: 
+    person("Claudiu", "Forgaci", , "c.forgaci@tudelft.nl", role = c("aut", "cre", "cph"),
+           comment = c(ORCID = "0000-0003-3218-5102")),
+    person("Francesco", "Nattino", , "f.nattino@esciencecenter.nl", role = "aut",
+           comment = c(ORCID = "0000-0003-3286-0139")),
+    person("Netherlands eScience Center", , , "info@esciencecenter.nl", role = "fnd")
+Description: The data included in this package is 
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Depends: 
+    R (>= 3.5)
+LazyData: true
