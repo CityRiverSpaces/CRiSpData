@@ -34,9 +34,12 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(CRiSpData)
+library(sf)
 
 plot(bucharest_osm$boundary)
 plot(bucharest_osm$streets$geometry, lwd = 0.5, add = TRUE)
 plot(bucharest_osm$river_centerline, col = "blue", add = TRUE)
 plot(bucharest_osm$river_surface, col = "blue", border = NA, add = TRUE)
 ```
+
+<img src="man/figures/README-example-1.png" width="100%" />

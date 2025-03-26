@@ -37,8 +37,9 @@ pak::pak("CityRiverSpaces/CRiSpData")
 
 This is a basic example which shows you how to solve a common problem:
 
-```{r example, eval = FALSE}
+```{r example}
 library(CRiSpData)
+library(sf)
 
 plot(bucharest_osm$boundary)
 plot(bucharest_osm$streets$geometry, lwd = 0.5, add = TRUE)
