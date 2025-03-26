@@ -1,9 +1,3 @@
-# library(osmdata)
-# library(sf)
-# library(dplyr)
-#
-# sf::sf_use_s2(FALSE)
-
 # Set the parameters
 city_name <- "Bucharest"
 river_name <- "Dâmbovița"
