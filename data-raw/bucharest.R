@@ -49,8 +49,10 @@ river_surface <- dplyr::bind_rows(river_surface$osm_polygons,
   sf::st_union()
 
 # Transform river centerline and surface into projected crs
-river_centerline <- sf::st_transform(river_centerline, crs) |>
-  sf::st_intersection(boundary)
+river_centerline <- river_centerline |>
+  sf::st_intersection(sf::st_as_sfc(bb)) |>
+  sf::st_transform(crs)
+
 river_surface <- sf::st_transform(river_surface, crs)
 
 # Initialise osm data object
