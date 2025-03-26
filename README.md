@@ -7,10 +7,11 @@
 <!-- badges: end -->
 
 This package contains geospatial data on urban river spaces used in
-CRiSp and related packages. The dataset contains vector data of the city
-boundary, bounding box enclosing the city boundary, spatial networks
-(street centerlines, railway lines), the river (centerline and surface),
-buildings surrounding the river, as well as a digital elevation model.
+[CRiSp](https://github.com/CityRiverSpaces/CRiSp) and related packages.
+The dataset contains vector data of the city boundary, bounding box
+enclosing the city boundary, spatial networks (street centerlines,
+railway lines), the river (centerline and surface), buildings
+surrounding the river, as well as a digital elevation model.
 
 The current dataset contains the case of River Dâmbovița in Bucharest.
 The data were derived from open sources such as
@@ -29,8 +30,6 @@ pak::pak("CityRiverSpaces/CRiSpData")
 ```
 
 ## Example
-
-This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(CRiSpData)
