@@ -33,4 +33,3 @@
 #' @source <https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM>
 # nolint end
 "bucharest_dem"
-
