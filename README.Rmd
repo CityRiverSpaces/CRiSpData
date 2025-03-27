@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 # CRiSpData
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/CityRiverSpaces/CRiSpData/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/CityRiverSpaces/CRiSpData/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 This package contains geospatial data on urban river spaces used in [CRiSp](https://github.com/CityRiverSpaces/CRiSp) and related packages. The dataset contains vector data of the city boundary, bounding box enclosing the city boundary, spatial networks (street centerlines, railway lines), the river (centerline and surface), buildings surrounding the river, as well as a digital elevation model.
