@@ -87,8 +87,6 @@ bb_exp <- bb |>
   sf::st_transform(sf::st_crs("EPSG:4326"))
 
 # Get streets
-# aoi <- sf::st_bbox(aoi_network) |> sf::st_transform(sf::st_crs("EPSG:4326"))
-# aoi_network_streets <- aoi_network |> sf::st_transform(sf::st_crs("EPSG:4326"))
 streets <- bb_exp |>
   osmdata::opq() |>
   osmdata::add_osm_feature("highway", c(highway_values, link_values)) |>
@@ -102,15 +100,10 @@ streets_lines <- streets$osm_lines |>
   dplyr::select("highway") |>
   dplyr::rename("type" = "highway")
 
-# aoi <- sf::st_as_sfc(aoi)
-# mask <- sf::st_intersects(streets_lines, aoi_network_streets, sparse = FALSE)
-# streets_lines <- streets_lines[mask, ]
 streets <- sf::st_transform(streets_lines, crs)
 bucharest_osm <- append(bucharest_osm, list(streets = streets))
 
 # Get railways
-# aoi <- sf::st_bbox(aoi_network) |> sf::st_transform(sf::st_crs("EPSG:4326"))
-# aoi_network_railways <- aoi_network |> sf::st_transform(sf::st_crs("EPSG:4326"))
 railways <- bb_exp |>
   osmdata::opq() |>
   osmdata::add_osm_feature("railway", "rail") |>
@@ -119,10 +112,6 @@ railways_lines <- railways$osm_lines |>
   dplyr::select("railway") |>
   dplyr::rename("type" = "railway")
 
-# aoi <- sf::st_as_sfc(aoi)
-# mask <- sf::st_intersects(railways_lines, aoi_network_railways, sparse = FALSE)
-# railways_lines <- railways_lines[mask, ]
-# railways_lines <- sf::st_transform(railways_lines, crs)
 railways <- sf::st_transform(railways_lines, crs)
 bucharest_osm <- append(bucharest_osm, list(railways = railways))
 
@@ -159,8 +148,8 @@ bucharest_osm <- lapply(bucharest_osm, fix_wkt_encoding)
 
 # Get the DEM data ----
 aoi_buff <- sf::st_buffer(bucharest_osm$aoi_network, dem_buffer)
-endpoint = "https://earth-search.aws.element84.com/v1"
-collection = "cop-dem-glo-30"
+endpoint <- "https://earth-search.aws.element84.com/v1"
+collection <- "cop-dem-glo-30"
 bb_dem <- sf::st_bbox(aoi_buff) |> sf::st_transform(sf::st_crs("EPSG:4326"))
 asset_urls <- rstac::stac(endpoint) |>
   rstac::stac_search(collections = collection, bbox = bb_dem) |>
