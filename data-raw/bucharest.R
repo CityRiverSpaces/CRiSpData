@@ -173,7 +173,9 @@ if (length(rasters) > 1) {
 } else {
   dem <- rasters[[1]]
 }
-bucharest_dem <- dem |> terra::wrap()
+bucharest_dem <- dem |>
+  terra::project(paste0("EPSG:", crs)) |>
+  terra::wrap()
 
 # Save as package data
 usethis::use_data(bucharest_osm, overwrite = TRUE, compress = "xz")
