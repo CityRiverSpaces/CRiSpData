@@ -1,9 +1,3 @@
-# library(osmdata)
-# library(sf)
-# library(dplyr)
-#
-# sf::sf_use_s2(FALSE)
-
 # Set the parameters
 city_name <- "Bucharest"
 river_name <- "Dâmbovița"
@@ -54,9 +48,13 @@ river_surface <- dplyr::bind_rows(river_surface$osm_polygons,
   sf::st_filter(river_centerline, .predicate = sf::st_intersects) |>
   sf::st_union()
 
+# Save clipped river centerline for AoI calculation
+river_centerline_clipped <- river_centerline |>
+  sf::st_intersection(sf::st_as_sfc(bb)) |>
+  sf::st_transform(crs)
+
 # Transform river centerline and surface into projected crs
-river_centerline <- sf::st_transform(river_centerline, crs) |>
-  sf::st_intersection(boundary)
+river_centerline <- sf::st_transform(river_centerline, crs)
 river_surface <- sf::st_transform(river_surface, crs)
 
 # Initialise osm data object
@@ -68,7 +66,7 @@ bucharest_osm <- list(
 )
 
 # Get streets and railways ----
-aoi_network <- sf::st_buffer(river_centerline, network_buffer) |>
+aoi_network <- sf::st_buffer(river_centerline_clipped, network_buffer) |>
   sf::st_union(sf::st_buffer(river_surface, network_buffer))
 bucharest_osm <-
   append(bucharest_osm, list(aoi_network = aoi_network |>
