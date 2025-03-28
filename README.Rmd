@@ -26,6 +26,13 @@ The current dataset contains the case of River Dâmbovița in Bucharest. The dat
 
 ## Installation
 
+You can install the released version of CRiSpDATA from
+[CRAN](https://cran.r-project.org) with:
+
+``` r
+install.packages("CRiSpData")
+```
+
 You can install the development version of CRiSpData from [GitHub](https://github.com/) with:
 
 ``` r
