@@ -23,7 +23,7 @@ GLO-30](https://dataspace.copernicus.eu/explore-data/data-collections/copernicus
 
 ## Installation
 
-You can install the released version of CRiSpDATA from
+You can install the released version of CRiSpData from
 [CRAN](https://cran.r-project.org) with:
 
 ``` r
