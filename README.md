@@ -67,7 +67,7 @@ This package includes or derives data from the following sources:
   [OpenStreetMap](https://www.openstreetmap.org), © OpenStreetMap
   contributors.  
   The data is licensed under the [Open Database License (ODbL)
-  v1.0](https://opendatacommons.org/licenses/odbl/1.0/).  
+  v1.0](https://opendatacommons.org/licenses/odbl/1-0/).  
   If you publicly use any adapted data from this package, you must also
   offer it under the ODbL.
 
