@@ -4,14 +4,15 @@
 
 * This is a new release.
 
-* checking CRAN incoming feasibility ... NOTE
-  Non-FOSS package license (file LICENSE)
+* checking DESCRIPTION meta-information ... NOTE
+  License components with restrictions not permitted:
+    Apache License (>= 2) + file LICENSE
   
-  The data come from OpenStreetMap (OSM) (`bucharest_osm`), which uses the
-  ODbL 1.0 license, and from the Copernicus GLO-30 DEM (`bucharest_dem`), which
-  is licensed under the ESA User License. Any data based on OSM must also use
-  the ODbL 1.0 license, but the database can also include data with other
-  licenses, such as the ESA User License of the Copernicus GLO-30 DEM data.
+  The package uses Apache License 2.0 for code and includes data licensed
+  under the ODbL v1.0 and ESA User License. The LICENSE file clearly separates
+  and explains these components. We assume that the NOTE regarding "License
+  components with restrictions" refers to Apache 2.0 being combined with file
+  LICENSE.
 
 * checking installed package size ... NOTE
     installed size is  5.4Mb
