@@ -2,18 +2,18 @@
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
   "identifier": "CRiSpData",
-  "description": "This package contains geospatial data on urban river spaces used in CRiSp and related packages. The dataset contains vector data of the city boundary, bounding box enclosing the city boundary, spatial networks (street centerlines, railway lines), the river (centerline and surface), buildings surrounding the river, as well as a digital elevation model. The current dataset contains the case of River Dâmbovița in Bucharest.",
-  "name": "CRiSpData: Data for the City River Spaces packages",
+  "description": "Geospatial data on urban river spaces used in 'CRiSp' (City River Spaces) and related packages. Contains vector data of the city boundary, bounding box enclosing the city boundary, spatial networks (street centerlines, railway lines), the river (centerline and surface), buildings surrounding the river, as well as a digital elevation model for River Dâmbovița in Bucharest.",
+  "name": "CRiSpData: Geospatial Data for Urban River Space Delineation",
   "codeRepository": "https://github.com/CityRiverSpaces/CRiSpData",
   "issueTracker": "https://github.com/CityRiverSpaces/CRiSpData/issues",
-  "license": "`use_mit_license()`, `use_gpl3_license()` or friends to pick a\n    license",
+  "license": "Apache License 2",
   "version": "0.1.0",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.4.2 (2024-10-31)",
+  "runtimePlatform": "R version 4.4.0 (2024-04-24)",
   "author": [
     {
       "@type": "Person",
@@ -56,6 +56,42 @@
     }
   ],
   "softwareSuggestions": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "dplyr",
+      "name": "dplyr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=dplyr"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "osmdata",
+      "name": "osmdata",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=osmdata"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "rstac",
+      "name": "rstac",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=rstac"
+    },
     {
       "@type": "SoftwareApplication",
       "identifier": "sf",
@@ -103,5 +139,8 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "3534.793KB"
+  "fileSize": "4722.302KB",
+  "releaseNotes": "https://github.com/CityRiverSpaces/CRiSpData/blob/master/NEWS.md",
+  "readme": "https://github.com/CityRiverSpaces/CRiSpData/blob/main/README.md",
+  "contIntegration": "https://github.com/CityRiverSpaces/CRiSpData/actions/workflows/R-CMD-check.yaml"
 }
