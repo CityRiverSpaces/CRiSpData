@@ -94,30 +94,6 @@
     },
     {
       "@type": "SoftwareApplication",
-      "identifier": "sf",
-      "name": "sf",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=sf"
-    },
-    {
-      "@type": "SoftwareApplication",
-      "identifier": "terra",
-      "name": "terra",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=terra"
-    },
-    {
-      "@type": "SoftwareApplication",
       "identifier": "testthat",
       "name": "testthat",
       "version": ">= 3.0.0",
@@ -137,9 +113,33 @@
       "name": "R",
       "version": ">= 3.5"
     },
+    "2": {
+      "@type": "SoftwareApplication",
+      "identifier": "sf",
+      "name": "sf",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=sf"
+    },
+    "3": {
+      "@type": "SoftwareApplication",
+      "identifier": "terra",
+      "name": "terra",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=terra"
+    },
     "SystemRequirements": null
   },
-  "fileSize": "4722.302KB",
+  "fileSize": "4723.063KB",
   "releaseNotes": "https://github.com/CityRiverSpaces/CRiSpData/blob/master/NEWS.md",
   "readme": "https://github.com/CityRiverSpaces/CRiSpData/blob/main/README.md",
   "contIntegration": "https://github.com/CityRiverSpaces/CRiSpData/actions/workflows/R-CMD-check.yaml"
