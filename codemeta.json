@@ -7,13 +7,13 @@
   "codeRepository": "https://github.com/CityRiverSpaces/CRiSpData",
   "issueTracker": "https://github.com/CityRiverSpaces/CRiSpData/issues",
   "license": "Apache License 2",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.4.0 (2024-04-24)",
+  "runtimePlatform": "R version 4.4.2 (2024-10-31)",
   "author": [
     {
       "@type": "Person",
@@ -139,7 +139,7 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "4723.063KB",
+  "fileSize": "4722.449KB",
   "releaseNotes": "https://github.com/CityRiverSpaces/CRiSpData/blob/master/NEWS.md",
   "readme": "https://github.com/CityRiverSpaces/CRiSpData/blob/main/README.md",
   "contIntegration": "https://github.com/CityRiverSpaces/CRiSpData/actions/workflows/R-CMD-check.yaml"
