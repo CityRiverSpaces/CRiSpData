@@ -1,0 +1,38 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  CRiSpData: Geospatial Data for Urban River Space
+  Delineation
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Claudiu
+    family-names: Forgaci
+    email: c.forgaci@tudelft.nl
+    affiliation: Delft University of Technology
+    orcid: 'https://orcid.org/0000-0003-3218-5102'
+  - given-names: Francesco
+    family-names: Nattino
+    email: f.nattino@esciencecenter.nl
+    affiliation: Netherlands eScience Center
+    orcid: 'https://orcid.org/0000-0003-3286-0139'
+repository-code: 'https://github.com/CityRiverSpaces/CRiSpData'
+abstract: >-
+  Geospatial data on urban river spaces used in 'CRiSp'
+  (City River Spaces) and related packages. Contains vector
+  data of the city boundary, bounding box enclosing the city
+  boundary, spatial networks (street center lines, railway
+  lines), the river (center line and surface), buildings
+  surrounding the river, as well as a digital elevation
+  model for River Dâmbovița in Bucharest.
+keywords:
+  - R
+  - geospatial
+  - Bucharest
+  - CRiSp
+license-url: 'https://raw.githubusercontent.com/CityRiverSpaces/CRiSpData/refs/heads/main/LICENSE'
+
