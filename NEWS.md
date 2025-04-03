@@ -7,15 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 # Version 0.1.2
 
+## Added
+
+- CITATION.cff added to the repository
+
 ## Fixed
 
 - Words misspelled in DESCRIPTION were fixed 
 
 # Version 0.1.1
-
-## Added
-
-- CITATION.cff added to the repository
 
 ## Fixed
 
