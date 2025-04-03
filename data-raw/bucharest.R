@@ -48,12 +48,12 @@ river_surface <- dplyr::bind_rows(river_surface$osm_polygons,
   sf::st_filter(river_centerline, .predicate = sf::st_intersects) |>
   sf::st_union()
 
-# Save clipped river centerline for AoI calculation
+# Save clipped river center line for AoI calculation
 river_centerline_clipped <- river_centerline |>
   sf::st_intersection(sf::st_as_sfc(bb)) |>
   sf::st_transform(crs)
 
-# Transform river centerline and surface into projected crs
+# Transform river center line and surface into projected crs
 river_centerline <- sf::st_transform(river_centerline, crs)
 river_surface <- sf::st_transform(river_surface, crs)
 

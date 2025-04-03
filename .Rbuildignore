@@ -6,4 +6,5 @@
 ^LICENSE\.md$
 ^cran-comments\.md$
 ^\.github$
+^CRAN-SUBMISSION$
 ^CITATION.cff$
