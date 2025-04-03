@@ -9,7 +9,7 @@ A list of sf objects representing:
 \describe{
 \item{bb}{The city bounding box.}
 \item{boundary}{The administrative boundary of Bucharest.}
-\item{river_centerline}{The Dâmbovița river centerline.}
+\item{river_centerline}{The Dâmbovița river center line.}
 \item{river_surface}{The Dâmbovița river area.}
 \item{aoi_network}{The area of interest (AoI) to include the network around
 the river.}

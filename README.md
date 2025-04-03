@@ -11,8 +11,8 @@
 This package contains geospatial data on urban river spaces used in
 [CRiSp](https://github.com/CityRiverSpaces/CRiSp) and related packages.
 The dataset contains vector data of the city boundary, bounding box
-enclosing the city boundary, spatial networks (street centerlines,
-railway lines), the river (centerline and surface), buildings
+enclosing the city boundary, spatial networks (street center lines,
+railway lines), the river (center line and surface), buildings
 surrounding the river, as well as a digital elevation model.
 
 The current dataset contains the case of River Dâmbovița in Bucharest.

@@ -11,7 +11,7 @@ Authors@R: c(
 Description: Geospatial data on urban river spaces used in 'CRiSp' (City
     River Spaces) and related packages. Contains vector data of the city
     boundary, bounding box enclosing the city boundary, spatial networks
-    (street centerlines, railway lines), the river (centerline and
+    (street center lines, railway lines), the river (center line and
     surface), buildings surrounding the river, as well as a digital
     elevation model for River Dâmbovița in Bucharest.
 License: Apache License (>= 2) + file LICENSE

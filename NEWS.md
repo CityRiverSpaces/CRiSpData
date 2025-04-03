@@ -5,6 +5,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 # [Unreleased]
 
+# Version 0.1.2
+
+## Fixed
+
+- Words misspelled in DESCRIPTION were fixed 
+
 # Version 0.1.1
 
 ## Fixed
