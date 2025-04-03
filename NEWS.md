@@ -7,9 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 # Version 0.1.1
 
-## Changed
+## Fixed
 
-- terra and sf were made hard dependencies #13
+- terra and sf were made hard dependencies, which is required for package data to be used #13
 
 # Version 0.1.0
 
