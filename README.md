@@ -21,14 +21,12 @@ The data were derived from open sources such as
 [Copernicus DEM
 GLO-30](https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM).
 
+The latest version of the dataset is available on the [4TU.ResearchData
+data
+repository](https://data.4tu.nl/datasets/f5d5e118-b5bd-4dfb-987f-fe10d1b9b386)
+in the GPKG and GeoTIFF formats.
+
 ## Installation
-
-You can install the released version of CRiSpData from
-[CRAN](https://cran.r-project.org) with:
-
-``` r
-install.packages("CRiSpData")
-```
 
 You can install the development version of CRiSpData from
 [GitHub](https://github.com/) with:
