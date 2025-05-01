@@ -179,7 +179,7 @@ for (layer_name in names(bucharest_osm)) {
 
 # Save the DEM data as GeoTIFF ----
 terra::writeRaster(terra::unwrap(bucharest_dem),
-                   "data/bucharest_dem.tiff",
+                   "inst/extdata/bucharest_dem.tiff",
                    overwrite = TRUE)
 
 # Save as package data ----
