@@ -3,7 +3,7 @@
 
 cff-version: 1.2.0
 title: >-
-  CRiSpData: Geospatial Data for Urban River Space
+  CRiSpExampleData: Geospatial Data for Urban River Space
   Delineation
 message: >-
   If you use this software, please cite it using the
@@ -20,7 +20,7 @@ authors:
     email: f.nattino@esciencecenter.nl
     affiliation: Netherlands eScience Center
     orcid: 'https://orcid.org/0000-0003-3286-0139'
-repository-code: 'https://github.com/CityRiverSpaces/CRiSpData'
+repository-code: 'https://github.com/CityRiverSpaces/CRiSpExampleData'
 abstract: >-
   Geospatial data on urban river spaces used in 'CRiSp'
   (City River Spaces) and related packages. Contains vector
@@ -34,5 +34,5 @@ keywords:
   - geospatial
   - Bucharest
   - CRiSp
-license-url: 'https://raw.githubusercontent.com/CityRiverSpaces/CRiSpData/refs/heads/main/LICENSE'
+license-url: 'https://raw.githubusercontent.com/CityRiverSpaces/CRiSpExampleData/refs/heads/main/LICENSE'
 

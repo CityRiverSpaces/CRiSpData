@@ -1,11 +1,11 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# CRiSpData
+# CRiSpExampleData
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/CityRiverSpaces/CRiSpData/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/CityRiverSpaces/CRiSpData/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/CityRiverSpaces/CRiSpExampleData/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/CityRiverSpaces/CRiSpExampleData/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 This package contains geospatial data on urban river spaces used in
@@ -28,18 +28,18 @@ in the GPKG and GeoTIFF formats.
 
 ## Installation
 
-You can install the development version of CRiSpData from
+You can install the development version of CRiSpExampleData from
 [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("pak")
-pak::pak("CityRiverSpaces/CRiSpData")
+pak::pak("CityRiverSpaces/CRiSpExampleData")
 ```
 
 ## Example
 
 ``` r
-library(CRiSpData)
+library(CRiSpExampleData)
 library(sf)
 
 plot(bucharest_osm$boundary)

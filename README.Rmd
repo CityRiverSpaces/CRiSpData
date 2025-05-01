@@ -15,10 +15,10 @@ knitr::opts_chunk$set(
 )
 ```
 
-# CRiSpData
+# CRiSpExampleData
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/CityRiverSpaces/CRiSpData/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/CityRiverSpaces/CRiSpData/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/CityRiverSpaces/CRiSpExampleData/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/CityRiverSpaces/CRiSpExampleData/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 This package contains geospatial data on urban river spaces used in [CRiSp](https://github.com/CityRiverSpaces/CRiSp) and related packages. The dataset contains vector data of the city boundary, bounding box enclosing the city boundary, spatial networks (street center lines, railway lines), the river (center line and surface), buildings surrounding the river, as well as a digital elevation model.
@@ -29,18 +29,18 @@ The latest version of the dataset is available on the [4TU.ResearchData data rep
 
 ## Installation
 
-You can install the development version of CRiSpData from [GitHub](https://github.com/) with:
+You can install the development version of CRiSpExampleData from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("pak")
-pak::pak("CityRiverSpaces/CRiSpData")
+pak::pak("CityRiverSpaces/CRiSpExampleData")
 ```
 
 ## Example
 
 
 ```{r example}
-library(CRiSpData)
+library(CRiSpExampleData)
 library(sf)
 
 plot(bucharest_osm$boundary)
