@@ -166,6 +166,22 @@ bucharest_dem <- dem |>
   terra::project(paste0("EPSG:", crs)) |>
   terra::wrap()
 
-# Save as package data
+
+# Save the OSM data as GPKG ----
+for (layer_name in names(bucharest_osm)) {
+  if (layer_name != "bb") {
+    sf::st_write(bucharest_osm[[layer_name]],
+                 "data/bucharest_osm.gpkg",
+                 layer = layer_name,
+                 append = file.exists("data/bucharest_osm.gpkg"))
+  }
+}
+
+# Save the DEM data as GeoTIFF ----
+terra::writeRaster(terra::unwrap(bucharest_dem),
+                   "data/bucharest_dem.tiff",
+                   overwrite = TRUE)
+
+# Save as package data ----
 usethis::use_data(bucharest_osm, overwrite = TRUE, compress = "xz")
 usethis::use_data(bucharest_dem, overwrite = TRUE, compress = "xz")
