@@ -171,9 +171,9 @@ bucharest_dem <- dem |>
 for (layer_name in names(bucharest_osm)) {
   if (layer_name != "bb") {
     sf::st_write(bucharest_osm[[layer_name]],
-                 "data/bucharest_osm.gpkg",
+                 "inst/extdata/bucharest_osm.gpkg",
                  layer = layer_name,
-                 append = file.exists("data/bucharest_osm.gpkg"))
+                 append = file.exists("inst/extdata/bucharest_osm.gpkg"))
   }
 }
 
