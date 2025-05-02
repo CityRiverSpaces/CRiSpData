@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/articles/special-files.html
 
 library(testthat)
-library(CRiSpData)
+library(CRiSpExampleData)
 
-test_check("CRiSpData")
+test_check("CRiSpExampleData")

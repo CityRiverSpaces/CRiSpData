@@ -1,11 +1,11 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# CRiSpData
+# CRiSpExampleData
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/CityRiverSpaces/CRiSpData/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/CityRiverSpaces/CRiSpData/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/CityRiverSpaces/CRiSpExampleData/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/CityRiverSpaces/CRiSpExampleData/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 This package contains geospatial data on urban river spaces used in
@@ -21,27 +21,25 @@ The data were derived from open sources such as
 [Copernicus DEM
 GLO-30](https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM).
 
+The latest version of the dataset is available on the [4TU.ResearchData
+data
+repository](https://data.4tu.nl/datasets/f5d5e118-b5bd-4dfb-987f-fe10d1b9b386)
+in the GPKG and GeoTIFF formats.
+
 ## Installation
 
-You can install the released version of CRiSpData from
-[CRAN](https://cran.r-project.org) with:
-
-``` r
-install.packages("CRiSpData")
-```
-
-You can install the development version of CRiSpData from
+You can install the development version of CRiSpExampleData from
 [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("pak")
-pak::pak("CityRiverSpaces/CRiSpData")
+pak::pak("CityRiverSpaces/CRiSpExampleData")
 ```
 
 ## Example
 
 ``` r
-library(CRiSpData)
+library(CRiSpExampleData)
 library(sf)
 
 plot(bucharest_osm$boundary)
